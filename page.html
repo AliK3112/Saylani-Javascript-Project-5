@@ -13,13 +13,13 @@
 </head>
 <body>
     <button class="sidebar-toggle">
-        <i class="fas-fa-bars"></i>
+        <i class="fas fa-bars"></i>
     </button>
     <aside class="sidebar">
         <div class="sidebar-header">
-            <img src="./logo.svg" alt="logo" class="logo"/>
+            <img src="logo.svg" alt="logo" class="logo"/>
             <button class="close-btn">
-                <i class="fas fa-times"></i>
+            	<i class="fas fa-times"></i>
             </button>
         </div>
         <!-- links -->
@@ -40,8 +40,23 @@
     </aside>
 </body>
 <script>
+const ButtonToggle = document.querySelector(".sidebar-toggle");
+const ButtonClose = document.querySelector(".close-btn");
+const Sidebar = document.querySelector(".sidebar");
 
+ButtonToggle.addEventListener("click", function() {
+    if (Sidebar.classList.contains("show-sidebar")) {
+        Sidebar.classList.remove("show-sidebar");
+    }
+    else {
+        Sidebar.classList.add("show-sidebar");
+    }
+});
 
-
+ButtonClose.addEventListener("click", function() {
+    if (Sidebar.classList.contains("show-sidebar")) {
+        Sidebar.classList.remove("show-sidebar");
+    }
+});
 </script>
 </html>
